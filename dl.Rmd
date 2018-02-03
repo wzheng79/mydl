@@ -1,0 +1,27 @@
+[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/)
+
+by Michael Nielson
+
+# problem: teach a computer to recognize handwritten digits
+
+# sigmoid function
+
+- sigmoid as a smooth activation function implies that small changes in weights and bias of NN produce small changes of neuron output
+
+```{r}
+x = seq(-10, 10, 0.1)
+y = 1 / (1 + exp(-x))
+plot(x, y, type = "l")
+```
+
+# cost function
+
+- mse: mean squared error: $c(w,b) = \frac{1}{2n}\sum_x(y(x) - a)^2$
+
+# learning algorithm to minimize cost function
+
+- gradient descent: $\triangle C \thickapprox \nabla C \cdot \triangle v$.
+- backpropagation is a fast algorithm to compute gradient. 
+- bp: compute model errors and corresponding adjustments from the last layer to earlier layers
+
+# why it works?
